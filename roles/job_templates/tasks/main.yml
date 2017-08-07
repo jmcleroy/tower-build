@@ -1,13 +1,10 @@
 ---
 - name: create the sales demo admin project
   tower_project:
-    config_file: ~/.tower_cli.cfg
     name: Ansible NXOS
     description: Networking playgooks
-    organization: Ansible Sales Demo
     scm_type: git
     scm_url: https://github.com/jmcleroy/jpoc
-    scm_branch: master
     scm_clean: no
     scm_delete_on_update: no
     scm_update_on_launch: yes
