@@ -1,15 +1,4 @@
 ---
-sales_demo_projects:
-  - name: Ansible NXOS
-    scm_url: https://github.com/jmcleroy/jpoc
-    team_roles:
-      - name: admin
-        type: update
-      - name: admin
-        type: use
-      - name: admin
-        type: admin
-
 sales_demo_job_templates:
   - name: NXOS Backup Configuration
     description: "Shut down and delete a user's demo instances in AWS by Tower username"
