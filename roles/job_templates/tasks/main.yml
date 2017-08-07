@@ -3,6 +3,7 @@
   tower_credential:
     name: network
     kind: net
+    organization: default
     password: ask
     state: present
     tower_config_file: "/tmp/tower_cli.cfg"
