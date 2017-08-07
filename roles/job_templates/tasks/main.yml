@@ -8,6 +8,7 @@
     scm_clean: no
     scm_delete_on_update: no
     scm_update_on_launch: yes
+    tower_config_file: "~/tower_cli.cfg"
     state: present
 
 #- name: create all sales demo job templates
