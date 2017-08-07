@@ -2,9 +2,22 @@
 - name: create the sales demo admin project
   tower_project:
     name: Ansible NXOS
-    description: Networking playgooks
+    description: Networking playbooks
     scm_type: git
     scm_url: https://github.com/jmcleroy/jpoc
+    scm_clean: no
+    scm_delete_on_update: no
+    scm_update_on_launch: yes
+    tower_host: 172.16.3.15
+    state: present
+
+---
+- name: create the sales demo admin project
+  tower_project:
+    name: Ansible F5
+    description: Networking playbooks
+    scm_type: git
+    scm_url: https://github.com/jmcleroy/f5bigip
     scm_clean: no
     scm_delete_on_update: no
     scm_update_on_launch: yes
