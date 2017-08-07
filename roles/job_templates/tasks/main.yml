@@ -1,7 +1,7 @@
 ---
 - name: create the sales demo admin project
   tower_project:
-    config_file: ~/.tower_cli.cfg
+    tower_config_file: ~/.tower_cli.cfg
     name: Ansible NXOS
     description: Networking playgooks
     scm_type: git
