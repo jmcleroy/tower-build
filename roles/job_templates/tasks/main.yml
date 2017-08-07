@@ -2,6 +2,7 @@
 - name: Add tower credential
   tower_credential:
     name: network
+    kind: net
     password: ask
     state: present
     tower_config_file: "/tmp/tower_cli.cfg"
