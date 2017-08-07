@@ -1,5 +1,12 @@
 ---
-- name: create the sales demo admin project
+- name: Add tower credential
+  tower_credential:
+    name: network
+    password: ask
+    state: present
+    tower_config_file: "/tmp/tower_cli.cfg"
+
+- name: create the sales demo nxos project
   tower_project:
     name: Ansible NXOS
     description: Networking playbooks
@@ -11,7 +18,7 @@
     tower_host: 172.16.3.15
     state: present
 
-- name: create the sales demo admin project
+- name: create the sales demo f5 project
   tower_project:
     name: Ansible F5
     description: Networking playbooks
@@ -23,18 +30,3 @@
     tower_host: 172.16.3.15
     state: present
 
-- name: create all sales demo job templates
-  shell: >
-    tower-cli job_template create
-    --name "{{ item.name }}"
-    --description "{{ item.description }}"
-    --job-type "{{ item.job_type }}"
-    --project "{{ item.project }}"
-    --playbook "{{ item.playbook }}"
-    --machine-credential "{{ item.machine_credential }}"
-    --network-credential "{{ item.network_credential }}"
-    --limit "{{ item.limit | default('') }}"
-    --extra-vars "{{ item.extra_vars | default('foo: bar') | from_yaml | to_yaml }}"
-    --ask-inventory-on-launch "{{ item.ask_inventory_on_launch | default('no') | bool }}"
-    --ask-job-type-on-launch "{{ item.ask_job_type_on_launch | default('no') | bool }}"
-  with_items: "{{ sales_demo_job_templates }}"
