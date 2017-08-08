@@ -79,7 +79,7 @@
 #    tower_host: "{{ host }}"
 #    tower_username: "{{ username }}"
 #    tower_password: "{{ password }}"
-- name: Create Lee's job templates
+- name: Create NXOS backup job template
   tower_job_template:
     name: "nxos backup"
     description: "backup nxos"
