@@ -70,8 +70,11 @@
   tower_job_template:
     name: nxos_backup
     job_type: run
-    inventory: Network Inventory
+    inventory: NXOS
     project: Ansible NXOS
     playbook: nxos_backup.yml
     machine_credential: nxos
     state: present
+    tower_host: "{{ host }}"
+    tower_username: "{{ username }}"
+    tower_password: "{{ password }}"
