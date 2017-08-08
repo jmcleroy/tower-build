@@ -1,7 +1,7 @@
 ---
 - name: Edit Demo Credential
   tower_credential:
-    name: Demo Credential
+    name: demo
     kind: ssh
     organization: Default
     password: "{{ password }}"
