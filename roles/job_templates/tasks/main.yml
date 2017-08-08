@@ -19,8 +19,8 @@
     scm_clean: no
     scm_delete_on_update: no
     scm_update_on_launch: yes
-    tower_host: 172.16.3.15
     state: present
+    organization: default
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
     tower_password: "{{ password }}"
@@ -34,7 +34,7 @@
     scm_clean: no
     scm_delete_on_update: no
     scm_update_on_launch: yes
-    tower_host: 172.16.3.15
+    organization: default
     state: present
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
