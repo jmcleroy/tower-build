@@ -87,11 +87,12 @@
     job_type: "run"
     inventory: "NXOS"
     #inventory: Demo
-    project: "Ansible NXOS"
+    project: "NXOS"
     playbook: "nxos_backup.yml"
     machine_credential: "Demo Credentials"
     #extra_vars: "{{ item.extra_vars | default('sales: demo') | from_yaml | to_yaml }}"
     state: present
+    tower_verify_ssl: false
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
     tower_password: "{{ password }}"
