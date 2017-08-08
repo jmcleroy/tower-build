@@ -87,7 +87,7 @@
     inventory: "NXOS"
     project: "NXOS"
     playbook: "nxos_backup.yml"
-    machine_credential: "Demo Credentials"
+    machine_credential: "machine"
     network_credential: "nxos"
     state: present
     tower_verify_ssl: false
