@@ -66,16 +66,29 @@
     tower_username: "{{ username }}"
     tower_password: "{{ password }}"
 
-- name: Create NXOS backup
-  tower_job_template:
-    name: nxos_backup
-    job_type: run
-    inventory: NXOS
-    project: NXOS
-    playbook: nxos_backup.yml
-    machine_credential: Demo Credential
+#- name: Create NXOS backup
+#  tower_job_template:
+#    name: nxos_backup
+#    job_type: run
+#    inventory: NXOS
+#    project: NXOS
+#    playbook: nxos_backup.yml
+#    machine_credential: Demo Credential
 #    network_credential: Ansible NXOS
-    state: present
-    tower_host: "{{ host }}"
-    tower_username: "{{ username }}"
-    tower_password: "{{ password }}"
+#    state: present
+#    tower_host: "{{ host }}"
+#    tower_username: "{{ username }}"
+#    tower_password: "{{ password }}"
+
+- name: Run backups of nxos devies
+  shell: >
+    tower-cli job_template create
+    --name "nxos_backup"
+    --description "Backup configuraton"
+    --job-type "run"
+    --inventory "NXOS"
+    --project "NXOS"
+    --playbook "nxos_backup.yml"
+    --machine-credential "Demo Credential"
+    --network-credential "nxos"
+    --become-enabled "no"
