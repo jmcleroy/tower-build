@@ -73,7 +73,8 @@
     inventory: NXOS
     project: Ansible NXOS
     playbook: nxos_backup.yml
-    machine_credential: nxos
+    machine_credential: Demo Credential
+    network_credential: Ansible NXOS
     state: present
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
