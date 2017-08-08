@@ -8,3 +8,4 @@ sales_demo_job_templates:
     ask_inventory: no
     machine_credential: Demo 'Credentials'
     network_credential: nxos
+    inventory: NXOS
