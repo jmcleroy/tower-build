@@ -38,7 +38,7 @@
 
 - name: create the sales demo nxos project
   tower_project:
-    name: Ansible NXOS
+    name: NXOS
     description: Networking playbooks
     scm_type: git
     scm_url: https://github.com/jmcleroy/jpoc
@@ -53,7 +53,7 @@
 
 - name: create the sales demo f5 project
   tower_project:
-    name: Ansible F5
+    name: F5
     description: Networking playbooks
     scm_type: git
     scm_url: https://github.com/jmcleroy/f5bigip
