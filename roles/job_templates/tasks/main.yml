@@ -82,17 +82,17 @@
 - name: Create Lee's job templates
   tower_job_template:
     #config_file: ~/tower_cli.cfg
-    name: "{{ item.name }}"
-    description: "{{ item.description }}"
-    job_type: "{{ item.job_type }}"
-    inventory: "{{ item.inventory | default('Demo') }}"
+    name: "nxos_backup"
+    description: "backup nxos"
+    job_type: "run"
+    inventory: "NXOS"
     #inventory: Demo
-    project: "{{ item.project }}"
-    playbook: "{{ item.playbook }}"
-    machine_credential: "{{ item.machine_credential }}"
+    project: "Ansible NXOS"
+    playbook: "nxos_backup.yml"
+    machine_credential: "Demo Credentials"
     #extra_vars: "{{ item.extra_vars | default('sales: demo') | from_yaml | to_yaml }}"
     state: present
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
     tower_password: "{{ password }}"
-  with_items: "{{ sales_demo_job_templates }}"
+ # with_items: "{{ sales_demo_job_templates }}"
