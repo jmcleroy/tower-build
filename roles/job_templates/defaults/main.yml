@@ -7,7 +7,7 @@ sales_demo_job_templates:
     playbook: nxos_backup.yml
     ask_inventory: yes
     machine_credential: Demo Credentials
-    network_credential: Network
+    network_credential: nxos
     extra_vars:
     team_roles:
       - name: admin
