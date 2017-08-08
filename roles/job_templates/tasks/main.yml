@@ -3,7 +3,7 @@
   tower_credential:
     name: network
     kind: net
-    organization: default
+    organization: Default
     password: ask
     state: present
     tower_host: "{{ host }}"
@@ -20,7 +20,7 @@
     scm_delete_on_update: no
     scm_update_on_launch: yes
     state: present
-    organization: default
+    organization: Default
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
     tower_password: "{{ password }}"
@@ -34,7 +34,7 @@
     scm_clean: no
     scm_delete_on_update: no
     scm_update_on_launch: yes
-    organization: default
+    organization: Default
     state: present
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
