@@ -92,6 +92,4 @@
     --machine-credential "Demo Credential"
     --network-credential "nxos"
     --become-enabled "no"
-    --host "{{ host }}"
-    --username "{{ username }}"
-    --pasword "{{ password }}"
+    --host-config-key "/tmp/tower_cli.cfg"
