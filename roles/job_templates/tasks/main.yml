@@ -6,7 +6,9 @@
     organization: default
     password: ask
     state: present
-    tower_config_file: "/tmp/tower_cli.cfg"
+    tower_host: {{ tower_host }}
+    tower_username: {{ tower_username }}
+    tower_password: {{ tower_password }}
 
 - name: create the sales demo nxos project
   tower_project:
