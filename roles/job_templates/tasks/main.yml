@@ -1,10 +1,22 @@
 ---
 - name: Add tower credential
   tower_credential:
-    name: network
+    name: Demo Credential
+    kind: ssh
+    organization: Default
+    password: "{{ password }}"
+    state: present
+    tower_host: "{{ host }}"
+    tower_username: "{{ username }}"
+    tower_password: "{{ password }}"
+    vault_password: "{{ password }}"
+
+- name: Add tower credential
+  tower_credential:
+    name: nxos
     kind: net
     organization: Default
-    password: ask
+    password: "{{ password }}"
     state: present
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
