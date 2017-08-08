@@ -1,22 +1,36 @@
 ---
-- name: Add tower credential
+- name: Edit Demo Credential
   tower_credential:
     name: Demo Credential
     kind: ssh
     organization: Default
     password: "{{ password }}"
     state: present
+    username: admin
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
     tower_password: "{{ password }}"
     vault_password: "{{ password }}"
 
-- name: Add tower credential
+- name: Add NXOS Credentials
   tower_credential:
     name: nxos
     kind: net
     organization: Default
+    username: cisco
     password: "{{ password }}"
+    state: present
+    tower_host: "{{ host }}"
+    tower_username: "{{ username }}"
+    tower_password: "{{ password }}"
+
+- name: Add network credentials
+  tower_credential:
+    name: network
+    kind: net
+    organization: Default
+    username: admin
+    password: "{{ password1 }}"
     state: present
     tower_host: "{{ host }}"
     tower_username: "{{ username }}"
