@@ -6,9 +6,9 @@
     organization: default
     password: ask
     state: present
-    tower_host: "{{ tower_host }}"
-    tower_username: "{{ tower_username }}"
-    tower_password: "{{ tower_password }}"
+    tower_host: "{{ host }}"
+    tower_username: "{{ username }}"
+    tower_password: "{{ password }}"
 
 - name: create the sales demo nxos project
   tower_project:
@@ -21,9 +21,9 @@
     scm_update_on_launch: yes
     tower_host: 172.16.3.15
     state: present
-    tower_host: "{{ tower_host }}"
-    tower_username: "{{ tower_username }}"
-    tower_password: "{{ tower_password }}"
+    tower_host: "{{ host }}"
+    tower_username: "{{ username }}"
+    tower_password: "{{ password }}"
 
 - name: create the sales demo f5 project
   tower_project:
@@ -36,6 +36,6 @@
     scm_update_on_launch: yes
     tower_host: 172.16.3.15
     state: present
-    tower_host: "{{ tower_host }}"
-    tower_username: "{{ tower_username }}"
-    tower_password: "{{ tower_password }}"
+    tower_host: "{{ host }}"
+    tower_username: "{{ username }}"
+    tower_password: "{{ password }}"
