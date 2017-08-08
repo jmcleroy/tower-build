@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: no
+
+  roles:
+    - {role: credentials, tags: ['credentials']}
+    - {role: projects, tags: ['projects']}
+    - {role: job_templates, tags: ['job_templates']}
